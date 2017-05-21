@@ -1,2 +1,2 @@
 # SinemaOtomasyonu
-I used Java, JDBC, PrimeFaces, Html, Css 
+I used Java, JDBC, PrimeFaces, Html, Css, NetBeans IDE, PostgreSQL
