@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                background-image: url("../arka plan.jpg");  
+            }
+            .giris-yap{
+                height: 650px;
+                position:absolute;
+                right:1000px;
+                top: 150px;
+                margin: 50px auto;
+                width: 700px;
+                padding:50px 50px 50px;
+
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            .sağ{
+                height: 200px;
+                position:absolute;
+                right: 400px;
+                top: 0px;
+                margin: 250px auto;
+                width: 320px;
+                padding:50px 50px 50px;
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            .button{
+                width:700px; 
+                height:600px; 
+                background-color:#036; 
+                border:1px solid #e2e2e2;
+                font:bold 14px tahoma;
+            }
+            .button:hover {
+                Border:1px solid #000000;
+            }
+            .aynı {
+                top: 600px;
+                display: inline-block;
+                width: 1400px;
+                height: 50px;
+                float:top;
+                margin: 25px;
+                padding: 33px 25px 29px;
+                border-radius: 7px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                background-image: url("../filmband.gif");
+            }
+        </style>
+    </h:head>
+    <!--BODY-->
+    <h:body>
+        <!--PAGE HEADER-->
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <h:form class="aynı">  
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Anasayfa" >
+                        <p:menuitem value="anasayfa" action="index.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye ol" >                     
+                        <p:menuitem value="Email ile" action="kayıt.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye Girişi" >                       
+                        <p:menuitem value="Email ile" action="giris.xhtml"  />
+                    </p:submenu>                  
+                </p:menubar>
+            </h:form>
+        </p:layoutUnit>
+        <!--/PAGE HEADER-->
+        <!--FORM-->
+        <h:form class="giris-yap">
+            <center>
+                <!--FORM HEADER TABLE-->
+                <table  class="tablo" border="4" cellspacing="0" cellpadding="2" width="80%">
+                    <tr>
+                        <td><big><b><center>PERDE</center></b></big></td>
+                    </tr>
+                </table>
+                <!--/FORM HEADER TABLE-->
+            </center>
+            <!--FORM BODY TABLE-->
+            <table class="button">
+                <!--BODY TABLE A-->
+                <tr>
+                    <td>
+                        <b><big>A</big></b>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h:commandButton   value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <br></br> <br></br> 
+                    <td>
+                        <h:commandButton  value="koltuk 2" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                </tr>
+                <!--/BODY TABLE A-->
+                <!--BODY TABLE B-->
+                <tr>
+                    <td>
+                        <b><big>B</big></b>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 2" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--/BODY TABLE B-->
+                <!--BODY TABLE C-->
+                <tr>
+                    <td>
+                        <b><big>C</big></b>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 2" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 3" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 4" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 5" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton  value="koltuk 6" style="color: #F9DDD3; background-color: #006699"   action="biletal.xhtml"/>
+                    </td>
+                </tr>
+                <!--/BODY TABLE C-->
+                <!--BODY TABLE D-->
+                <tr>
+                    <td>
+                        <b><big>D</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--BODY TABLE D-->
+                <!--BODY TABLE E-->
+                <tr>
+                    <td>
+                        <b><big>E</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--/BODY TABLE E-->
+                <!--BODY TABLE F-->
+                <tr>
+                    <td>
+                        <b><big>F</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--/BODY TABLE F-->
+                <!--BODY TABLE G-->
+                <tr>
+                    <td>
+                        <b><big>G</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--/BODY TABLE G-->
+                <!--BODY TABLE H-->
+                <tr>
+                    <td>
+                        <b><big>H</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr> 
+                <!--/BODY TABLE H-->
+                <!--BODY TABLE I-->
+                <tr>
+                    <td>
+                        <b><big>I</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                </tr>
+                <!--/BODY TABLE I-->
+                <!--BODY TABLE J-->
+                <tr>
+                    <td>
+                        <b><big>J</big></b>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 1" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 2" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 3" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 4" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 5" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 6" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml" />
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 7" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                    <td>
+                        <h:commandButton value="koltuk 8" style="color: #F9DDD3; background-color: #006699" action="biletal.xhtml"/>
+                    </td>
+                </tr>
+                <!--/BODY TABLE J-->
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+            <!--/FORM BODY TABLE-->
+        </h:form>
+        <!--/FORM-->
+        <!--FORM PAGE RIGHT-->
+        <h:form class="sağ">
+            <!--FORM PAGE RIGHT TABLE-->
+            <table class="tablo">
+                <tr>
+                    <td>Koltuk-no</td>
+                    <td>
+                        <h:inputText id="Koltuk-no"/>
+                        <h:message for="Koltuk-no"/>
+                    </td>
+                </tr>       
+                <tr>
+                    <td>Seans</td>
+                    <td>
+                        <h:inputSecret id="Seans"/>
+                        <h:message for="Seans"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salon</td>
+                    <td>
+                        <h:inputText id="Salon"/>
+                        <h:message for="Salon"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ad</td>
+                    <td>
+                        <h:inputSecret id="Ad"/>
+                        <h:message for="Ad"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Soyad</td>
+                    <td>
+                        <h:inputSecret id="Soyad"/>
+                        <h:message for="Soyad"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toplam-ücret</td>
+                    <td>
+                        <h:inputSecret id="Toplam-ücret"/>
+                        <h:message for="Toplam-ücret"/>
+                    </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>
+                        <h:commandButton value="DEVAM ET" style="color: #F9DDD3; background-color: #FF0000" action="hesap.xhtml" />
+                    </td>
+                </tr>
+            </table>
+            <!--/FORM PAGE RIGHT TABLE-->
+        </h:form>
+        <!--/FORM PAGE RIGHT-->
+    </h:body>
+    <!--BODY-->
+</html>
+

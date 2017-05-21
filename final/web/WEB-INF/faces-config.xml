@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>denemeBean</managed-bean-name>
+        <managed-bean-class>beanpackage.DenemeBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+        
+    <managed-bean>
+        <managed-bean-name>kitaydetayBean</managed-bean-name>
+        <managed-bean-class>beanpackage.KitaydetayBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+       
+        <managed-bean>
+        <managed-bean-name>filmBean</managed-bean-name>
+        <managed-bean-class>beanpackage.FilmBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        </managed-bean>
+      
+    <managed-bean>
+        <managed-bean-name>filmdetayBean</managed-bean-name>
+        <managed-bean-class>beanpackage.FilmdetayBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+</faces-config>

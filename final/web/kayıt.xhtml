@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                background-image: url("../arka plan.jpg");
+            }
+            .aynı {
+                top: 600px;
+                display: inline-block;
+                width: 1400px;
+                height: 50px;
+                float:top;
+                margin: 25px;
+                padding: 33px 25px 29px;
+                border-radius: 7px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                background-image: url("../filmband.gif");
+            }
+            .giris-yap{
+                height: 120px;
+                position:absolute;
+                right: 750px;
+                top: 50px;
+                margin: 250px auto;
+                width: 320px;
+                padding:50px 50px 50px;
+                border-bottom: 30px solid #006699;
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            .tablo{
+                font-size: 20px;
+                height: 100px;
+            }
+        </style>
+    </h:head>
+    <!--BODY-->
+    <h:body>
+        <!--PAGE HEADER-->
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <h:form class="aynı">  
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Anasayfa" >
+                        <p:menuitem value="anasayfa" action="index.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye ol" >
+                        <p:menuitem value="Email ile" action="kayıt.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye Girişi" >
+                        <p:menuitem value="Email ile" action="giris.xhtml"  />
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+        </p:layoutUnit>
+        <!--/PAGE HEADER-->
+        <!--FORM-->
+        <h:form class="giris-yap">
+            <center>
+                <table class="tablo">
+                    <tr>
+                        <td> KullanıcıAdı </td>
+                        <td>
+                            <h:inputText value="#{denemeBean.kullanici.kadi}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Name </td>
+                        <td>
+                            <h:inputText value="#{denemeBean.kullanici.adi}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Surname </td>
+                        <td>
+                            <h:inputText value="#{denemeBean.kullanici.soyadi}"/>
+                        </td>
+                    </tr>
+                    <td> E-mail </td>
+                    <td>
+                        <h:inputText value="#{denemeBean.kullanici.email}"/>
+                    </td>
+                    <tr>
+                        <td> Password </td>
+                        <td>
+                            <h:inputSecret value="#{denemeBean.kullanici.sifre}"/>
+                        </td>
+                    </tr>
+                    <table>   
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <h:commandButton value="Üye Ol " style="color: #F9DDD3; background-color: #006699" action="#{denemeBean.kullanicikaydet()}"  />
+                            </td>
+                            <td>
+                                <h:commandButton  value="giris" style="color: #F9DDD3; background-color: #006699"   action="giris.xhtml" />
+                            </td>
+                        </tr>
+                    </table>
+                </table>
+            </center>
+        </h:form>
+        <!--/FORM-->
+    </h:body>
+    <!--/BODY-->
+</html>
+

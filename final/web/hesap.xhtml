@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                background-image: url("../arka plan.jpg");
+            }
+            .son{
+                height: 350px;
+                position:absolute;
+                right: 750px;
+                top: 0px;
+                margin: 200px auto;
+                width: 320px;
+                padding:50px 50px 50px;
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            .veri{
+                font-size: 20px;
+                height: 100px;
+            }
+            .aynı {
+                top: 600px;
+                display: inline-block;
+                width: 1400px;
+                height: 50px;
+                float:top;
+                margin: 25px;
+                padding: 33px 25px 29px;
+                border-radius: 7px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                background-image: url("../filmband.gif");
+            }
+        </style>
+    </h:head>
+    <!--BODY-->
+    <h:body>
+        <!--PAGE HEADER-->
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <h:form class="aynı">  
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Anasayfa" >
+                        <p:menuitem value="anasayfa" action="index.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye ol" >
+                        <p:menuitem value="Email ile" action="kayıt.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye Girişi" >
+                        <p:menuitem value="Email ile" action="giris.xhtml"  />
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+        </p:layoutUnit>
+        <!--/PAGE HEADER-->
+        <!--FORM-->
+        <h:form class="son">
+            <table class="veri">
+                <tr>
+                    <td> İsim </td>
+                    <td>
+                        <h:inputText id="İsim" />
+                        <h:message for="İsim"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Soyisim </td>
+                    <td>
+                        <h:inputSecret id="Soyisim"/>
+                        <h:message for="Soyisim"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b><big>KART SAHİBİNİN</big></b></td>
+                </tr>
+                <tr>
+                    <td> Ad </td>
+                    <td>
+                        <h:inputSecret id="Ad"/>
+                        <h:message for="Ad"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Soyad </td>
+                    <td>
+                        <h:inputSecret id="Soyad"/>
+                        <h:message for="Soyad"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Kart-Numarası </td>
+                    <td>
+                        <h:inputSecret id="Kart-Numarası"/>
+                        <h:message for="Kart-Numarası"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Son-Kullanma-Tarihi </td>
+                    <td>
+                        <h:inputSecret id="Son-Kullanma-Tarihi"/>
+                        <h:message for="Son-Kullanma-Tarihi"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Güvenlik-Numarası </td>
+                    <td>
+                        <h:inputSecret id="Güvenlik-Numarası"/>
+                        <h:message for="Güvenlik-Numarası"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Kart-Türü </td>
+                    <td>
+                        <h:inputSecret id="Kart-Türü"/>
+                        <h:message for="Kart-Türü"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:commandButton value="SATIN AL" style="color: #F9DDD3; background-color: #FF0000" action="hesap.xhtml" />
+                    </td>
+                </tr>
+            </table>
+        </h:form>
+        <!--/FORM-->
+    </h:body>
+    <!--/BODY-->
+</html>
+

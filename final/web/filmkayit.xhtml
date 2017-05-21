@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                background-image: url("../arka plan.jpg");                 
+            }
+            .son{
+                height: 250px;
+                position:absolute;
+                right: 750px;
+                top: 0px;
+                margin: 200px auto;
+                width: 250px;
+                padding:0px 50px 50px;
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            .veri{
+                font-size: 20px;
+                height: 100px;
+            }
+            .aynı {
+                top: 600px;
+                display: inline-block;
+                width: 1400px;
+                height: 50px;
+                float:top;
+                margin: 25px;
+                padding: 33px 25px 29px;
+                border-radius: 7px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                background-image: url("../filmband.gif");
+            }          
+        </style>
+    </h:head>
+    <!--BODY-->
+    <h:body>
+        <!--PAGE HEADER-->
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <h:form class="aynı">  
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Anasayfa" >
+                        <p:menuitem value="anasayfa" action="index.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye ol" >
+                        <p:menuitem value="Email ile" action="kayıt.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye Girişi" >
+                        <p:menuitem value="Email ile" action="giris.xhtml"  />
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+        </p:layoutUnit>
+        <!--/PAGE HEADER-->
+        <!--FORM-->
+        <h:form class="son">
+            <!--FORM TABLE-->
+            <table class="veri">
+                <h:panelGrid columns="2" >
+                    FilmId:  <h:inputText value="#{filmBean.film.filmid}"></h:inputText>
+                    FilmAd:  <h:inputText value="#{filmBean.film.filmad}"></h:inputText>
+                    Konu:  <h:inputText value="#{filmBean.film.konu}"></h:inputText>
+                    Vtarih:  <h:inputText value="#{filmBean.film.vtarih}"></h:inputText>
+                    Tur:  <h:inputText value="#{filmBean.film.tur}"></h:inputText>
+                    Salonno:  <h:inputText value="#{filmBean.film.salonno}"></h:inputText>
+                    &nbsp; <h:commandButton action="#{filmBean.filmkayit()}" value="Film ekle" style="color: #F9DDD3; background-color: #FF0000"></h:commandButton>
+                    <h:commandButton value="Filmleri Gör" style="color: #F9DDD3; background-color: #FF0000" action="filmsil.xhtml" />
+                </h:panelGrid>
+            </table>
+            <!--/FORM TABLE-->
+        </h:form>
+        <!--FORM-->
+    </h:body>
+    <!--/BODY-->
+</html>
+

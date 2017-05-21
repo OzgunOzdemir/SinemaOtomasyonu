@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                background-image: url("../arka plan.jpg");
+            }   
+            .aynı {
+                top: 600px;
+                display: inline-block;
+                width: 1400px;
+                height: 50px;
+                float:top;
+                margin: 25px;
+                padding: 33px 25px 29px;
+                border-radius: 7px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+                background-image: url("../filmband.gif");
+            }
+            #beyazperde {
+                background: url("../beyazperde.png");
+                height: 800px;
+                right: 100px;
+                top: 150px;
+                width: 250px;
+            }
+            .ic{
+                height: 400px;
+                position:absolute;
+                right: 900px;
+                top: 100px;
+                margin: 150px auto;
+                width: 850px;
+                padding:50px 50px 50px;
+                border-radius: 20px;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+                background-image: -webkit-gradient(linear, right top, right bottom, from(#999999), to(#999999));
+                opacity: 2.0;
+            } 
+            /* ımages */
+            #bir {
+                background: url("../bir.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 25px;
+                top: 200px;
+                width: 340px;
+            }
+            #iki {
+                background: url("../iki.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 25px;
+                top: 450px;
+                width: 340px;
+            }
+            #üc {
+                background: url("../üc.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 400px;
+                top: 200px;
+                width: 340px;
+            }
+            #dort{
+                background: url("../dort.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 400px;
+                top: 450px;
+                width: 340px;
+            }
+            #bes {
+                background: url("../bes.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 25px;
+                top: 700px;
+                width: 340px;
+            }
+            #altı{
+                background: url("../altı.jpg") no-repeat scroll 0 0 transparent;
+                height: 200px;
+                position: absolute;
+                right: 400px;
+                top: 700px;
+                width: 340px;
+            }
+            /* /images */
+        </style>
+    </h:head>
+    <!--BODY-->
+    <h:body>
+        <!--IMAGES-->
+        <div id="bir">
+        </div>
+        <div id="iki">
+        </div>
+        <div id="üc">
+        </div>
+        <div id="dort">
+        </div>
+        <div id="bes">
+        </div>
+        <div id="altı">
+        </div>
+        <!--/IMAGES-->
+        <!--PAGE HEADER-->
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <h:form class="aynı">  
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Anasayfa" >
+                        <p:menuitem value="anasayfa" action="index.xhtml"  />
+                    </p:submenu>
+                    <p:submenu label="Üye ol" >
+                        <p:menuitem value="Email ile" action="kayıt.xhtml"  />  
+                    </p:submenu>
+                    <p:submenu label="Üye Girişi" >
+                        <p:menuitem value="Email ile" action="giris.xhtml"  />
+                    </p:submenu>
+                    <f:facet name="options">
+                        <p:inputText style="margin-right:10px" placeholder="Ara"/>
+                        <p:commandButton type="button" value="Arama" icon="ui-icon-extlink" />
+                    </f:facet>
+                </p:menubar>
+            </h:form>
+        </p:layoutUnit>
+        <!--/PAGE HEADER-->
+        <!--FORM-->
+        <h:form class="devamet">
+            <p:tabView class="ic" dynamic="true" cache="true">
+                <!--SINEMA TANITIMI-->
+                <p:tab title="Sinema Tanıtımı">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <h:outputText value= "*Stadyum tarzı oturma şeklinde, 110 cm. aralıklı ve her koltukta kişiye özel bardaklık bulunan konforlu oturma düzeni."/>
+                        <br></br><br></br>
+                        <h:outputText value= "*İnternet üzerinden de bilet alma imkanı sunan online bilet sistemi."/>
+                        <br></br><br></br>
+                        <h:outputText value= "*Tüm salon girişlerinde lcd ekrandan oynayan filmin fragmanı seans bilgileri ve film afişinin yayını."/>
+                        <br></br><br></br>
+                    </h:panelGrid>
+                </p:tab>
+                <!--/SINEMA TANITIMI-->
+                <!--SALON ÖZELLİKLERİ-->
+                <p:tab title="Salon Özellikleri">
+                    <h:panelGrid class="salon" columns="2" cellpadding="10">
+                        <p:accordionPanel dynamic="true" cache="true">
+                            <p:tab title="Salon 1">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText
+                                        value="*44 KOLTUK"/> <br></br>
+                                    <h:outputText
+                                        value="*3D" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Salon 2">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText
+                                        value="*44 KOLTUK"/> <br></br>
+                                    <h:outputText
+                                        value="*3D" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Salon 3">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText
+                                        value="*44 KOLTUK"/> <br></br>
+                                    <h:outputText
+                                        value="*3D" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Salon 4">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText
+                                        value="*44 KOLTUK"/> <br></br>
+                                    <h:outputText
+                                        value="*3D" />
+                                </h:panelGrid>
+                            </p:tab>
+                            <p:tab title="Salon 5">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputText
+                                        value="*44 KOLTUK"/> <br></br>
+                                    <h:outputText
+                                        value="*3D" />
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:accordionPanel>
+                    </h:panelGrid>
+                </p:tab>
+                <!--/SALON ÖZELLİKLERİ-->
+                <!--HEDEF MİSYON-->
+                <p:tab title="Hedef ve Misyon">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <h:outputText value="Sinemamızın hedefi, müşterilerimizin istekleri doğrultusunda hareket ederek , müşteri memnuniyetini en yüksek seviyeye çıkartmak ve Sinema sektöründe adından yenilikçiliği ve kalitesiyle söz ettirmektir."/>
+                        <br></br><br></br><br></br>
+                        <b><big><h:outputText value="MİSYONUMUZ"/></big></b>
+                        <br></br>
+                        <h:outputText value="Sinema ile ilgili tüm hizmetlerde prensiplerinden ödün vermiyerek sinema severlerin ilk tercihi olmak."/>
+                    </h:panelGrid>
+                </p:tab>
+                <!--/HEDEF MİSYON-->
+                <!--ILETISIM-->
+                <p:tab title="İletişim">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <b><big><h:outputText value="ADRES"/></big></b>
+                        <br></br>
+                        <h:outputText value="Meydan Kavağı Mahallesi 1598 Sokak Mehmet Ali Manavoğlu Sitesi A Blok No:17"/>
+                        <br></br><br></br><br></br>
+                        <b><big><h:outputText value="TELEFON"/></big></b>
+                        <br></br>
+                        <h:outputText value="05057838119"/>
+                    </h:panelGrid>
+                </p:tab>
+                <!--/ILETISIM-->
+                <!--VIZYONDAKI FILMLER-->
+                <p:tab title="Vizyondaki Filmler">
+                    <h:panelGrid columns="2" cellpadding="10">
+                    </h:panelGrid>
+                </p:tab>
+                <!--VIZYONDAKI FILMLER-->
+            </p:tabView>
+        </h:form>
+        <!--/FORM-->
+    </h:body>
+    <!--BODY-->
+</html>
+
